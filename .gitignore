@@ -1,3 +1,5 @@
+.asset-cache
 _site
 node_modules
+bower_components
 Gemfile.lock

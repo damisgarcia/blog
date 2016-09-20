@@ -1,0 +1,23 @@
+{
+  "name": "damisgarcia.github.io",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Start Bootstrap"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/damisgarcia/blog",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "angular": "^1.5.8",
+    "bLazy": "blazy#^1.6.2"
+  }
+}

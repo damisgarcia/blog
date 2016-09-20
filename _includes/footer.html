@@ -60,10 +60,12 @@
 </footer>
 
 <!-- jQuery -->
-<script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}"></script>
-
+<script src="{{ "/vendor/jquery/dist/jquery.min.js " | prepend: site.baseurl }}"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/vendor/bootstrap-sass/assets/javascripts/bootstrap.js" | prepend: site.baseurl }}"></script>
+<!-- Vendor -->
+<script src="{{ "/vendor/bLazy/blazy.js" | prepend: site.baseurl }}"></script>
+<!-- Angular -->
+<script src="{{ "/vendor/angular/angular.js " | prepend: site.baseurl }}"></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
+{% js application %}

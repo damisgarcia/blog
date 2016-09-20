@@ -1,10 +1,10 @@
 # Site settings
 title: Clean Blog
-header-img: img/home-bg.jpg
+header-img: home-bg.jpg
 email: your-email@yourdomain.com
 copyright_name: Your/Project/Corporate Name
 description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/startbootstrap-clean-blog-jekyll"
+baseurl: "/blog"
 url: "http://yourdomain.com"
 twitter_username: SBootstrap
 github_username:  davidtmiller
@@ -20,6 +20,52 @@ markdown: kramdown
 highlighter: rouge
 permalink: pretty
 paginate: 5
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+exclude: ["less","node_modules","Gruntfile.js","Gulpfile.js","package.json","README.md", ".asset-cache"]
 
-gems: [jekyll-paginate, jekyll-feed]
+gems:
+  - jekyll-assets
+  - jekyll-angular
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-coffeescript
+
+assets:
+  compress:
+    css:
+      development: false
+      production: true
+    js:
+      development: false
+      production: true
+  debug: true
+  cache: .asset-cache
+  cdn: false
+  skip_baseurl_with_cdn: false
+  skip_prefix_with_cdn: false
+  prefix: ""
+  autowrite: false
+  autoprefixer:
+    browsers: ["> 1%","last 4 versions","IE > 8"]
+  assets:
+    - "*.png"
+    - "*.jpg"
+    - "*.svg"
+    - "*.ttf"
+    - "*.eot"
+    - "*.woff"
+    - "bundle.css"
+  digest: true
+  sources:
+    - _assets/javascripts
+    - _assets/stylesheets
+    - _assets/images
+    - _assets/fonts
+  features:
+    liquid: false
+    integrity: true
+    automatic_img_size: true
+    automatic_img_alt : true
+
+asset_bundler:
+  compress:
+    js: uglifyjs
